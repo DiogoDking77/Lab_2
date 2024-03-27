@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:background="@drawable/background_gradient">
+
+    <Button
+        android:id="@+id/btn_fechar_at2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:text="@string/btn_fechar_at2"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background_solid"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tv_pagina_at2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/btn_fechar_at2"
+        android:layout_centerVertical="true"
+        android:text="@string/at2_title"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_dados_aluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/tv_pagina_at2"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:text="@string/aluno_nome"
+        android:textSize="16sp"
+        android:textColor="@android:color/black" />
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab_2</string>
+    <string name="aluno_nome">Diogo Reis</string>
+    <string name="aluno_curso">IT Engeneering</string>
+    <string name="aluno_numero">nº28239</string>
+    <string name="at2_title">Activity 2</string>
+    <string name="btn_fechar_at2">Go Back</string>
+    <string name="btn_abrir_at2">Enter</string>
+    <string name="at1_title">Activity 1</string>
+</resources>

@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_fechar_at2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:text="@string/btn_fechar_at2"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:background="@drawable/button_background" />
+
+    <TextView
+        android:id="@+id/tv_pagina_at2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_fechar_at2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/at2_title"
+        android:textSize="24sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_dados_aluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_pagina_at2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/aluno_nome"
+        android:textSize="18sp"
+        android:textColor="@color/light_gray"
+        android:textStyle="italic" />
+
+</RelativeLayout>
