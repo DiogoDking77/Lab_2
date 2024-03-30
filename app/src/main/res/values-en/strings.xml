@@ -7,4 +7,11 @@
     <string name="btn_fechar_at2">Go Back</string>
     <string name="btn_abrir_at2">Enter</string>
     <string name="at1_title">Activity 1</string>
+    <string name="btn_abrir_at3">Add Notes</string>
+    <string name="description">Description:</string>
+    <string name="date">Date:</string>
+    <string name="add_note">Add Note</string>
+    <string name="back_to_at1">Back to AT1</string>
+    <string name="create_note">Create Note</string>
+    <string name="Excluir">Exclude</string>
 </resources>

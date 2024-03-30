@@ -7,73 +7,124 @@
     android:layout_height="match_parent"
     tools:context=".AT_Notas">
 
+    <!-- Botão para adicionar uma nova nota -->
+    <Button
+        android:id="@+id/btnToggleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?attr/selectableItemBackground"
+        android:drawableStart="@android:drawable/ic_input_add"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:text="@string/add_note"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnVoltarAT1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botão para voltar à atividade anterior -->
+    <Button
+        android:id="@+id/btnVoltarAT1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/back_to_at1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnToggleView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Label para o campo de descrição -->
     <TextView
         android:id="@+id/tvDescricaoLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Descrição:"
+        android:layout_marginStart="16dp"
+        android:text="@string/description"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/btnToggleView" />
 
+    <!-- Campo de texto para a descrição -->
     <EditText
         android:id="@+id/etDescricao"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvDescricaoLabel"
-        app:layout_constraintTop_toTopOf="@id/tvDescricaoLabel"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp" />
+        app:layout_constraintStart_toEndOf="@+id/tvDescricaoLabel"
+        app:layout_constraintTop_toTopOf="@id/tvDescricaoLabel" />
 
+    <!-- Label para o campo de data -->
     <TextView
         android:id="@+id/tvDataLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Data:"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/date"
         android:textAppearance="?android:attr/textAppearanceMedium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDescricaoLabel"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/etDescricao" />
 
-    <DatePicker
-        android:id="@+id/datePicker"
+    <!-- Layout para o DatePicker e TimePicker -->
+    <LinearLayout
+        android:id="@+id/datePickerLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:datePickerMode="spinner"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/tvDataLabel"
-        app:layout_constraintTop_toTopOf="@id/tvDataLabel"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvDataLabel"
+        app:layout_constraintTop_toTopOf="@id/tvDataLabel" >
 
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:spinnersShown="true" />
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+    </LinearLayout>
+
+    <!-- Botão para adicionar a nota -->
     <Button
         android:id="@+id/btnAdicionarNota"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Adicionar Nota"
-        app:layout_constraintTop_toBottomOf="@id/datePicker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/create_note"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/datePickerLayout" />
 
+    <!-- Lista de notas -->
     <ListView
         android:id="@+id/listaNotas"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/btnAdicionarNota"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAdicionarNota" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@
         android:id="@+id/btn_abrir_at3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Abrir Atividade 3"
+        android:text="@string/btn_abrir_at3"
         android:textSize="18sp"
         android:background="@drawable/button_background_solid"
         android:textColor="@android:color/white"

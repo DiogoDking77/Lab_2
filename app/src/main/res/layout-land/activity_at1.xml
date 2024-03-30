@@ -18,6 +18,19 @@
         android:paddingBottom="12dp"
         android:layout_marginEnd="8dp" />
 
+    <Button
+        android:id="@+id/btn_abrir_at3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_abrir_at3"
+        android:textColor="@android:color/white"
+        android:background="@drawable/button_background_solid"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_marginEnd="8dp" />
+
     <TextView
         android:id="@+id/tv_pagina_at1"
         android:layout_width="wrap_content"
